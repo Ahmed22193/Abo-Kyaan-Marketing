@@ -1,0 +1,801 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+@media (min-width: 768px) {
+    .container{
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container{
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container{
+        width: 1170px;
+    }
+}
+
+
+/* start style of up  */
+#up{
+    position: fixed;
+    color: rgb(255, 0, 221);
+    font-size: 4em;
+    z-index: 5;
+    bottom: 0;
+    right: 30px;
+    transition: transform 0.2s;
+    animation: upp 0.5s linear;
+}
+#up:hover{
+    transform: scale(1.2);
+    color: #800080;
+}
+@keyframes upp{
+    from{
+        opacity: 0.1;
+        scale: 0.5;
+        transform: translateY(100px);
+        color: rgba(255, 0, 221, 0.37);
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+        transform: translateY(0px);
+        color: rgb(255, 0, 221);
+    }
+}
+/* end style of scroll */
+/* ------------- start of content ----------- */
+.content1{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-color: rgba(0, 0, 0, 0.864);
+    text-align: center;
+    direction: rtl;
+    
+}
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    z-index: -2;
+}
+.content1 .box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.content1 .box h1{
+    margin-bottom: 20px;
+    font-size: 2.8em;
+    font-weight: 900;
+    color: aquamarine;
+    background: linear-gradient(to right, aquamarine, #8b19ef);
+    background-clip: text;
+    color: transparent;
+}
+.content1 .box p{
+    font-size: 1.3em;
+    font-weight: 900;
+    line-height: 1.6;
+    color: #148fa8;
+}
+.content1 .computerMoise{
+    color: aliceblue;
+    position: absolute;
+    left: 40px;
+    bottom: 30px;
+    font-size: 2em;
+    transition: 0.3s;
+}
+.content1 .computerMoise:hover{
+    color: aquamarine;
+}
+/* -------------------- end of content ------------- */
+/* --------------- start nav bar ---------------------- */
+.NavBar{
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    direction: ltr;
+    position: relative;
+    padding: 10px;
+    background-color: #fdf7f71c;
+}
+.NavBar nav{
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 8px;
+    height: 60px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-content: center;
+    padding: 0 5px;
+    background: rgba(172, 180, 180, 0.013);
+    /* background: linear-gradient(166deg, rgba(172,180,180,1) 0%, rgba(208,241,244,1) 100%); */
+}
+.NavBar nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    direction: rtl;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0 15px;
+}
+.NavBar .container nav ul li{
+    box-sizing: border-box;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+.NavBar .container nav ul li:hover{
+    transform: scale(1.1);
+    text-shadow : 1px 1px 2px #aaa ,
+    2px 2px 5px #777 , 
+    3px 3px 8px #555;
+}
+.NavBar .container nav h1{
+    font-size: 1.9em;
+    cursor: default;
+    color: white;
+    background: linear-gradient(90deg, #800080, #ffffff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 8px rgba(128, 0, 128, 0.5);
+}
+#menue{
+    position: absolute;
+    color: #0b1515;
+    right: 30px;
+    top: 25px;
+    font-size: 1.9em;
+    z-index: 3;
+    object-position: center;
+    display: none;
+}
+
+/* ---------- end of nav bar --------------- */
+
+/* ------------ media -------------- */
+@media (max-width : 991px) {
+    .NavBar{
+        background: rgba(172, 180, 180, 0);
+    }
+    #menue{
+        display: block;
+        color: #00d5ff;
+    }
+    .NavBar .container nav ul{
+        display: none;
+    }
+    .content1{
+        height: 100vh;
+    }
+    .box{
+        width: 100%;
+    }
+    .content1 .box h1{
+        margin-top: 30px;
+        font-size: 1.8em;
+        line-height: 1.4;
+    }
+    .content1 .box p{
+        font-size: 0.8em;
+        width: 85%;
+        margin: 0 auto;
+        line-height: 1.8;
+    }
+    .content1 .computerMoise{
+        font-size: 1.4em;
+    }
+}
+/* ------- menu ------------- */
+ul{
+    list-style: none;
+}
+.menueBar{
+    padding: 8px;
+    position: absolute;
+    top: 88px;
+    right: 30px;
+    width: 60%;
+    z-index: 3;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    background: rgba(0, 255, 213, 0.2);
+    box-shadow: inset 0 4px 20px rgba(0, 255, 247, 0.6), 0 4px 20px rgba(0, 255, 247, 0.6);
+}
+.menueBar li{
+    padding: 10px;
+    width: 100%;
+}
+.menueBar li a{
+    font-size: 1.4em;
+    width: 100%;
+    color: white;
+    background: linear-gradient(90deg, #ffffff, #800080);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 8px rgba(128, 0, 128, 0.5);
+}
+.menueBar li:hover{
+    background-color:rgb(9, 132, 159);
+    border-radius: 8px;
+}
+#menue:hover{
+    color: rgb(9, 132, 159);
+}
+#menue:hover + .menueBar {
+    opacity: 1;
+    z-index: 3;
+}
+/* ------------ end menue --------- */
+
+/* -------------- start Services ---------------- */
+.Services{
+    width: 100%;
+    margin: 40px 0;
+    background: rgb(245,245,245);
+    background: linear-gradient(166deg, rgba(245,245,245,1) 0%, rgba(152,170,167,1) 96%);
+}
+.Services .title{
+    margin:10px 0;
+    text-align: center;
+    padding: 20px 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.Services .title h2{
+    font-size: 3em;
+    cursor: default;
+    color: white;
+    background: linear-gradient(90deg, #800080, #ffffff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 8px rgba(128, 0, 128, 0.5);
+}
+.Services .content{
+    width: 95%;
+    display: grid;
+    object-position: center;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill , minmax(340px,1fr));
+    gap: 30px;
+    padding: 15px 0;
+}
+.Services .content .serv{
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+
+}
+.Services .content .serv:hover{
+    box-shadow: 0 4px 20px rgba(0, 255, 247, 0.6);
+}
+.Services .content .serv i{
+    margin: 10px 0;
+    font-size: 2em;
+    color: #800080;
+}
+.Services .content .serv h2{
+    font-size: 2em;
+    margin: 10px 0;
+    background: linear-gradient(to right, #00d5ff,#000000);
+    background-clip: text;
+    color: transparent;
+    cursor: default;
+}
+.Services .content .serv p{
+    direction: rtl;
+    line-height: 1.6;
+    font-weight: 600;
+    color: #3f3e3e;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+@media (max-width : 991px){
+    .Services .title{
+        margin: 0;
+    }
+    .Services .title h2{
+        font-size: 2em;
+    }
+    .Services .content .serv i{
+        font-size: 1.8em;
+    }
+    .Services .content .serv h2{
+        font-size: 1.8em;
+    }
+}
+@media (max-width : 767px){
+    .Services .content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+/* ----------- end of Services ----------------- */
+
+/* -------- animation on serv --------------- */
+.serv{
+    animation: apper1 5s linear;
+    animation-timeline :view() ;
+    animation-range: entry 0% cover 40%;
+}
+.serv i{
+    animation: apper2 5s linear;
+    animation-timeline :view() ;
+    animation-range: entry 0% cover 40%;
+}
+.serv h2{
+    animation: apper3 5s linear;
+    animation-timeline :view() ;
+    animation-range: entry 0% cover 40%;
+}
+@keyframes apper1 {
+    from{
+        opacity: 0;
+        scale : 0.4;
+    }
+    to{
+        opacity: 1;
+        scale : 1;
+        border-radius: 8px;
+    }
+}
+@keyframes apper2 {
+    from{
+        transform: translateX(-100px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+@keyframes apper3 {
+    from{
+        transform: translateX(100px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+/* ----- end of animation Serv --------- */
+
+/* ------- start of About us ----------- */
+.About{
+    margin-bottom: 40px;
+}
+.About .title{
+    margin:10px 0;
+    text-align: center;
+    padding: 20px 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.About .title h2{
+    font-size: 3em;
+    cursor: default;
+    color: white;
+    background: linear-gradient(90deg, #800080, #ffffff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 8px rgba(128, 0, 128, 0.5);
+}
+.About .About_content{
+    padding: 20px;
+    width: 90%;
+    margin: 50px auto;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+.About .About_content .About_image{
+    width: 50%;
+}
+.About_image img{
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 25px 25px 8px rgba(0, 0, 0, 0.468);
+}
+.About .About_content .About_Descr{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}   
+.About_Descr h2{
+    text-align: center;
+    font-size: 3em;
+    background: linear-gradient(90deg, #ffffff, #800080);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 8px rgba(128, 0, 128, 0.5);
+}
+.About_Descr p{
+    font-size: 1.8em;
+    text-align: center;
+    line-height: 1.6;
+    width: 90%;
+    margin: 20px auto;
+    color: #777;
+    font-weight: bold;
+    direction: rtl;
+}
+/* .vedio2{
+    object-position: right;
+} */
+@media (max-width : 767px){
+    .About_content{
+        flex-direction: column;
+    }
+    .About .About_content .About_image{
+        margin: 20px auto;
+    }
+    .About_Descr h2{
+        font-size: 2em;
+    }
+    .About_Descr p{
+        font-size: 1.2em;
+    }
+}
+/* ------------ animation ------------ */
+/* .About_Descr p{
+    animation: about3 2s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+} */
+
+.About_Descr h2{
+    animation: about2 2s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+}
+.About_image img{
+    animation: about 2s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+}
+@keyframes about {
+    from{
+        filter: blur(3px);
+        transform: translateY(200px);
+        scale: 0.5;
+    }
+    to{
+        filter: blur(0px);
+        transform: translateY(0px);
+        scale: 1;
+    }
+}
+@keyframes about2 {
+    from{
+        transform: translateX(400px);
+        scale: 0.5;
+        opacity: 0.1;
+    }
+    to{
+        transform: translateX(0px);
+        scale: 1;
+        opacity: 1;
+    }
+}
+/* @keyframes about3 {
+    from{
+        transform: translateX(-300px);
+        opacity: 0.1;
+    }
+    to{ 
+        transform: translateX(0px);
+        opacity: 1;
+    }
+} */
+
+@media (max-width : 991px){
+    .About .title{
+        margin: 0;
+    }
+    .About .title h2{
+        font-size: 2em;
+    }
+    .About_Descr p{
+        animation-range: entry 0% cover 35%;
+    }
+    .About_Descr h2{
+        animation-range: entry 0% cover 35%;
+    }
+    .About_image img{
+        animation-range: entry 0% cover 35%;
+    }
+}
+/* ------ end of about us -------------- */
+
+
+/*  ----------------- start of conatact us ------------- */
+.Contact{
+    background-image: linear-gradient(to right, #8e9eab 0%, #eef2f3  51%, #8e9eab  100%);
+}
+.Contact .cont{
+    text-align: center;
+    font-size: 2.8em;
+    margin: 30px 0;
+    padding: 20px;
+    background: linear-gradient(90deg, #ffffff, #800080);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 8px rgba(128, 0, 128, 0.5);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.485);
+}
+.Contact .ContactContent{
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.549);
+    border: 1px solid ;
+    width: 95%;
+    margin: 10px auto;
+    display: flex;
+    background: rgb(0,156,158);
+    background: linear-gradient(85deg, rgba(0,156,158,1) 0%, rgba(0,0,0,0.8379726890756303) 100%);
+}
+.Contact .ContactContent .contactLogo{
+    width: 30%;
+    background-color: #0b1515dd;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Contact .ContactContent .contactLogo i{
+    font-size: 4em;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+.Contact .ContactContent .contactLogo p{
+    font-size: 2em;
+    margin-bottom: 60px;
+    line-height: 1.6;
+    width: 80%;
+    margin: 0 auto;
+}
+/* ---- */
+.Contact .ContactContent .contactDesc{
+    width: 70%;
+    text-align: center;
+    padding: 25px;
+}
+.Contact .ContactContent .contactDesc form{
+    display: flex;
+    flex-direction: column;
+}
+.contactDesc h2{
+    margin: 15px 0;
+    font-size: 2.2em;
+    color: #00d5ff;
+}
+.contactDesc form input{
+    width: 60%;
+    margin: 10px auto;
+    height: 60px;
+    direction: rtl;
+    padding: 5px;
+    font-size: 1.7em;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffffff;
+    padding-right: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+input:focus{
+    transform: scale(1.1);
+    box-shadow: #000000bf 0px 0px 10px;
+}
+.contactDesc form #textarea{
+    height: 190px;
+    width: 60%;
+    margin: 0 auto;
+    direction: rtl;
+    padding: 10px;
+    font-size: 1.5em;
+    margin-top: 8px;
+    border: none;
+    background-color: #fffffff9;
+    border-radius: 8px;
+}
+.contactDesc form .submit{
+    width: 20%;
+    margin-top: 20px;
+    height: 60px;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #304352 0%, #d7d2cc  51%, #304352  100%);
+    padding: 15px 45px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+.contactDesc form .submit:hover{
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width : 767px){
+    .Contact .ContactContent .contactDesc{
+        width: 70%;
+        text-align: center;
+        padding: 25px;
+    }
+    .contactDesc h2{
+        margin: 15px 0;
+        font-size: 1.6em;
+    }
+    .contactDesc form input{
+        width: 100%;
+        height: 50px;
+        padding: 5px;
+        font-size: 1.4em;
+        padding-right: 10px;
+    }
+    .contactDesc form #textarea{
+        height: 120px;
+        width: 100%;
+        padding: 10px;
+        font-size: 1.4em;
+        margin-top: 8px;
+    }
+    .contactDesc form .submit{
+        width: 50%;
+        margin-top: 20px;
+        height: 40px;
+        font-size: 1em;
+        text-align: center;
+        padding: 0 0 0 1px;
+    }
+    .Contact .cont{
+        text-align: center;
+        font-size: 2em;
+        margin: 10px 0;
+        padding: 10px;
+    }
+    .Contact .ContactContent{
+        width: 95%;
+    }
+    .Contact .ContactContent .contactLogo{
+        width: 30%;
+        padding: 20px;
+    }
+    .Contact .ContactContent .contactLogo i{
+        font-size: 1.5em;
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+    .Contact .ContactContent .contactLogo p{
+        font-size: 0.8em;
+        margin-bottom: 60px;
+        line-height: 1.5;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+/* -----------------  start footer ---------------------- */
+
+footer{
+    background-color: #181616f3;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+footer .socialmeida{
+    margin: 10px 0;
+    padding: 10px 0;
+}
+footer .socialmeida i{
+    margin: 0 20px ;
+    font-size: 1.5em;
+    border-radius: 50%;
+    transition: color 0.2s;
+}
+.socialmeida a{
+    width: fit-content;
+    margin: 0 50px ;
+    font-size: 2em;
+    border-radius: 50%;
+    background-color: transparent;
+}
+.socialmeida .i1:hover{
+    color: #00d5ff;
+    text-shadow: 0px 0px 8px #00d5ff;
+}
+.socialmeida .i2:hover{
+    color: #800080;
+    text-shadow: 0px 0px 8px #800080;
+}
+.socialmeida .i3:hover{
+    color: green;
+    text-shadow: 0px 0px 8px green;
+}
+.info{
+    padding: 20px;
+}
+footer .container ul{
+    direction: rtl; 
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+}
+footer .container ul a{
+    font-weight: bold;
+    margin: 0 50px;
+    transition: 0.3s;
+}
+footer .container ul a:hover{
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.592);
+    color: #148fa8;
+}
+.copyright{
+    background-color: #000000;
+    padding: 15px;
+    font-size: 0.8em;
+}
+.copyright span{
+    color: #777;
+}
+@media (max-width : 767px){
+    .copyright{
+        font-size: 0.6em;
+    }
+    .socialmeida a{
+        font-size: 1em;
+        margin: 0 5px ;
+    }
+    .info{
+        padding: 5px;
+    }
+    footer .container ul a{
+        margin: 0 20px;
+        transition: 0.3s;
+        font-size: 0.8em;
+    }
+}
