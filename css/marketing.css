@@ -71,6 +71,54 @@ html{
     direction: rtl;
     
 }
+.socialmeida1{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 40%;
+    right: 30px;
+}
+.socialmeida1 i{
+    margin-bottom: 50px;
+    font-size: 1.4em;
+}
+.socialmeida1 .i1,
+.socialmeida2 .i1{
+    color: #00d5ff;
+    text-shadow: 0px 0px 8px #00d5ff;
+}
+.socialmeida1 .i2,
+.socialmeida2 .i2{
+    color: #ff00ff;
+    text-shadow: 0px 0px 10px #ff00ff;
+}
+.socialmeida1 .i3,
+.socialmeida2 .i3{
+    color: rgb(5, 255, 5);
+    text-shadow: 0px 0px 8px rgb(0, 250, 0);
+}
+.socialmeida2{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    bottom:-20%;
+    right: 23%;
+    display: none;
+}
+.socialmeida2 i{
+    margin-right: 15px;
+    font-size: 1.2em;
+}
+@media (max-width : 767px){
+    .socialmeida1{
+        display: none;
+    }
+    .socialmeida2{
+        display: flex;   
+    }
+    
+}
+
 video{
     position: absolute;
     top: 0;
@@ -185,7 +233,6 @@ a{
     object-position: center;
     display: none;
 }
-
 /* ---------- end of nav bar --------------- */
 
 /* ------------ media -------------- */
