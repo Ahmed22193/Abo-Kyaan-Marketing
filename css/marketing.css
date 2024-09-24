@@ -445,6 +445,7 @@ ul{
 }   
 .About_Descr h2{
     text-align: center;
+    cursor: default;
     font-size: 3em;
     background: linear-gradient(90deg, #ffffff, #800080);
     background-clip: text;
@@ -454,7 +455,8 @@ ul{
 .About_Descr p{
     font-size: 1.8em;
     text-align: center;
-    line-height: 1.6;
+    line-height: 1.7;
+    font-weight: bold;
     width: 90%;
     margin: 20px auto;
     color: #777;
@@ -469,13 +471,13 @@ ul{
         flex-direction: column;
     }
     .About .About_content .About_image{
-        margin: 20px auto;
+        margin: 30px auto;
     }
     .About_Descr h2{
         font-size: 2em;
     }
     .About_Descr p{
-        font-size: 1.2em;
+        font-size: 1.4em;
     }
 }
 /* ------------ animation ------------ */
@@ -554,6 +556,7 @@ ul{
     background-image: linear-gradient(to right, #8e9eab 0%, #eef2f3  51%, #8e9eab  100%);
 }
 .Contact .cont{
+    cursor: default;
     text-align: center;
     font-size: 2.8em;
     margin: 30px 0;
