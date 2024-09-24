@@ -1,8 +1,8 @@
 let up = document.querySelector("#up");
 
-let inputname = document.querySelector('#inputname').value;
-let inputemail = document.querySelector('#inputemail').value;
-let inputtext = document.querySelector('#textarea').value;
+let inputname = document.querySelector('#inputname');
+let inputemail = document.querySelector('#inputemail');
+let inputtext = document.querySelector('#textarea');
 let SUB = document.querySelector('#SUB');
 
 
@@ -10,9 +10,9 @@ let Submit = function(){
     var WhatsAppURL = "https://wa.me/201210382651?text=" +
     encodeURIComponent(
     " From WebSite " + "\n" +
-    "اسم العميل : " + inputname + "\n" +
-    " الايميل : " + inputemail + "\n" +
-    "استفسار : " + inputtext + "\n"
+    "اسم العميل : " + inputname.value + "\n" +
+    " الايميل : " + inputemail.value + "\n" +
+    "استفسار : " + inputtext.value + "\n"
     );
     window.open(WhatsAppURL, "_blank").focus();
 }
